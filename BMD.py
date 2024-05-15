@@ -7,7 +7,7 @@ Created on Fri May  3 21:41:21 2024
 
 import streamlit as st 
 from PIL import Image
-#import tensorflow as tf
+
 import numpy as np
 import cv2
 from tensorflow.keras.models import load_model
@@ -16,7 +16,6 @@ modelh = load_model('BMDH11.h5' ,compile = False)
 
 modelt = load_model('BMDT2.h5' ,compile = False)
 
-#image_path = 'C:/Users/user/Desktop/วิจัย BMD/9286C.jpg'
 
 image_height = 128
 image_width = 128
