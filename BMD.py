@@ -17,9 +17,6 @@ modelh = load_model('BMDH11.h5' ,compile = False)
 modelt = load_model('BMDT2.h5' ,compile = False)
 
 
-image_height = 128
-image_width = 128
-
 
 def Bone(a):
    if float(a) < -2.5 :
