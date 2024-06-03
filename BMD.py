@@ -18,14 +18,6 @@ modelt = load_model('BMDT2.h5' ,compile = False)
 
 
 
-def Bone(a):
-   if float(a) < -2.5 :
-       return 'Osteoporosis'
-   if float(a) < -1:
-       return 'Osteopenia'
-   else:
-       return 'Normal'
-
 
 
 
@@ -33,7 +25,7 @@ st.title("Predict BMD")
 img_file = st.file_uploader("เปิดไฟล์ภาพ")
 
 col1, col2 = st.columns([1,1]) 
-col3, col4 = st.columns([1,1]) 
+#col3, col4 = st.columns([1,1]) 
 
 
 if img_file is not None:
@@ -55,18 +47,25 @@ if img_file is not None:
     TscoreHip= f'{result1[0][0]:.1f}'
     
 
+    
+
     with col1:
-        st.write("predict T-score spine" )
+        st.write("predict T-score hip")
     with col2:
-        st.code(f"""{TscoreSpine}  {Bone(TscoreSpine)}""") 
+        if  float(TscoreHip) < 2.5 : 
+            st.write(":red[Osteoporosis]")  
+        elif  float(TscoreHip)  < 1 : 
+            st.write(":yellow[Osteopenia]")  
+        else:
+            st.write(":green[Normal]")  
+    
         
 
     
+        
 
-    with col3:
-        st.write("predict T-score hip")
-    with col4:
-        st.code(f"""{TscoreHip}  {Bone(TscoreHip)}""")  
+
+    
         
 
 
