@@ -50,7 +50,7 @@ if img_file is not None:
     
 
     with col1:
-        st.write("predict T-score hip")
+        st.write("predict Osteoporosis")
     with col2:
         if  float(TscoreHip) < 2.5 : 
             st.write(":red[Osteoporosis]")  
