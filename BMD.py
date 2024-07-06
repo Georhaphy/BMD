@@ -52,10 +52,8 @@ if img_file is not None:
     with col1:
         st.write("predict Osteoporosis")
     with col2:
-        if  float(TscoreHip) < 2.5 : 
-            st.write(":red[Osteoporosis]")  
-        elif  float(TscoreHip)  < 1 : 
-            st.write(":yellow[Osteopenia]")  
+        if  float(TscoreHip) < -1 : 
+            st.write(":red[Abnormal]")  
         else:
             st.write(":green[Normal]")  
     
