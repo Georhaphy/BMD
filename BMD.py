@@ -17,11 +17,22 @@ modelh = load_model('BMDH15.h5' ,compile = False)
 modelt = load_model('BMDT2.h5' ,compile = False)
 
 
+background_image = """
+<style>
+[data-testid="stAppViewContainer"] > .main {
+    background-image: url("https://img5.pic.in.th/file/secure-sv1/smsk-1e26f337bb6ec6813.jpg");
+    background-size: 100vw 100vh;  # This sets the size to cover 100% of the viewport width and height
+    background-position: center;
+    background-repeat: no-repeat;
+}
+</style>
+"""
+
+st.markdown(background_image, unsafe_allow_html=True)
 
 
 
-
-st.title("Predict BMD")
+st.title("Samutsakhon Osteoporosis Screening tool(S.O.S)")
 img_file = st.file_uploader("เปิดไฟล์ภาพ")
 
 col1, col2 = st.columns([1,1]) 
