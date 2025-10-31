@@ -33,7 +33,7 @@ st.markdown(background_image, unsafe_allow_html=True)
 
 
 #st.title("Samutsakhon Osteoporosis Screening tool(S.O.S)")
-st.markdown("<h1 style='text-align: center; color: black ; font-size: 25px ;'>Samutsakhon Osteoporosis Screening tool(SOS)</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: black ; font-size: 25px ;'>Samutsakhon Osteoporosis Screening tool (SOS)</h1>", unsafe_allow_html=True)
 img_file = st.file_uploader("เปิดไฟล์ภาพ")
 
 col1, col2 = st.columns([1,1]) 
